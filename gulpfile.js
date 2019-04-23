@@ -3,6 +3,8 @@ var sass = require("gulp-sass");
 var autoprefixer = require("gulp-autoprefixer");
 var browserSync = require("browser-sync").create();
 var reload = browserSync.reload;
+var cleanCSS = require("gulp-clean-css");
+let sourcemaps = require("gulp-sourcemaps");
 
 gulp.task("sass", function() {
   return gulp
@@ -25,7 +27,19 @@ gulp.task("browser-sync", function() {
   });
 });
 
+gulp.task("sass:minify", function() {
+  return gulp
+    .src("./public/css/*.css")
+    .pipe(sourcemaps.init())
+    .pipe(cleanCSS())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest("./public/css"));
+  // .pipe(browserSync.stream());
+});
+
 //Runs automatically after gulp command in terminal
 gulp.task("default", ["sass", "browser-sync"], function() {
   gulp.watch("./src/scss/**/*.scss", ["sass"]);
 });
+
+gulp.task("production", ["sass:minify"]);
