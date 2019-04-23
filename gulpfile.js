@@ -14,14 +14,7 @@ gulp.task("sass", function() {
     .pipe(gulp.dest("./public/css"));
 });
 
-/*
-gulp.task("printName", function() {
-  console.log("My name is Maddie!");
+//Runs automatically after gulp command in terminal
+gulp.task("default", ["sass"], function() {
+  gulp.watch("./src/scss/**/*.scss", ["sass"]);
 });
-
-gulp.task("printAge", function() {
-  console.log("I am 22!");
-});
-*/
-
-//gulp.task("default", []);
