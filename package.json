@@ -9,12 +9,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "minimatch": ">=3.0.2"
+    "gulp": "^3.9.1"
   },
   "dependencies": {
     "gulp-sass": "^4.0.2",
     "lodash": "^4.17.11",
+    "minimatch": "^3.0.4",
     "react": "^16.8.6"
   }
 }
