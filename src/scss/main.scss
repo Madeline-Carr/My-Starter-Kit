@@ -3,7 +3,10 @@
 body {
   color: white;
   background-color: $medium-color;
-  //Examples for Vendor Prefixers
-  display: flex;
-  flex-direction: row;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
 }
