@@ -12,6 +12,7 @@
     "gulp": "^3.9.1"
   },
   "dependencies": {
+    "gulp-sass": "^4.0.2",
     "react": "^16.8.6"
   }
 }
