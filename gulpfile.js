@@ -16,8 +16,10 @@ var webpack_config = require('./webpack.config.js');
 //Commands
 gulp.task('default', ['sass', 'browser-sync'], function() {
     gulp.watch('./src/scss/**/*.scss', ['sass']);
-    gulp.watch('./src/js/**/*.js', ['webpack']);
-    // gulp.watch(['./src/scss/**/*.scss', './public/']).on('change', reload);
+    gulp.watch('./src/**/*.js', ['webpack']);
+    gulp.watch(['./src/**/*.js']).on('change', reload);
+
+    // gulp.watch(['./src/js/**/*.js']).on('change', reload); KEEP //THIS WORKS
 });
 
 gulp.task('production', ['sass:minify']);

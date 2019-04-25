@@ -101,7 +101,7 @@ __webpack_require__.r(__webpack_exports__);
 var title = 'React is Working!';
 react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
   className: "container"
-}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_js_ChildComponent__WEBPACK_IMPORTED_MODULE_2__["default"], null)), document.getElementById('app'));
+}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, title, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_js_ChildComponent__WEBPACK_IMPORTED_MODULE_2__["default"], null)), document.getElementById('app'));
 
 /***/ }),
 /* 1 */
@@ -24917,7 +24917,7 @@ function (_Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "child"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "I am a ", this.state.typeOfComponent), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "I am a ", this.state.typeOfComponent), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "This is a paragraph!"));
     }
   }]);
 

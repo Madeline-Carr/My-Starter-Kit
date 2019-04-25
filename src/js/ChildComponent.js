@@ -6,7 +6,7 @@ class Child extends Component {
         return (
             <div className="child">
                 <h1>I am a {this.state.typeOfComponent}</h1>
-                <p />
+                <p>This is a paragraph!</p>
             </div>
         );
     }
