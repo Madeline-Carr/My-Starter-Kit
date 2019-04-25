@@ -6,6 +6,15 @@ var reload = browserSync.reload;
 var cleanCSS = require("gulp-clean-css");
 let sourcemaps = require("gulp-sourcemaps");
 
+
+//Commands
+gulp.task("default", ["sass", "browser-sync"], function() {
+  gulp.watch("./src/scss/**/*.scss", ["sass"]);
+});
+
+gulp.task("production", ["sass:minify"]);
+
+//Functions
 gulp.task("sass", function() {
   return gulp
     .src("./src/scss/**/*.scss")
@@ -36,10 +45,3 @@ gulp.task("sass:minify", function() {
     .pipe(gulp.dest("./public/css"));
   // .pipe(browserSync.stream());
 });
-
-//Runs automatically after gulp command in terminal
-gulp.task("default", ["sass", "browser-sync"], function() {
-  gulp.watch("./src/scss/**/*.scss", ["sass"]);
-});
-
-gulp.task("production", ["sass:minify"]);
