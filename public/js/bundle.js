@@ -24917,7 +24917,7 @@ function (_Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "child"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "I am a Pokemon", this.state.typeOfComponent));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "I am a ", this.state.typeOfComponent), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null));
     }
   }]);
 
