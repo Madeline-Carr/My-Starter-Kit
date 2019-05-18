@@ -17,6 +17,9 @@ gulp.task('default', ['sass', 'browser-sync'], function() {
     gulp.watch('./src/scss/**/*.scss', ['sass']);
     gulp.watch('./src/**/*.jsx', ['webpack']);
     gulp.watch(['./src/**/*.jsx']).on('change', reload);
+    //Watching index.js and app.js
+    gulp.watch('./src/*.js', ['webpack']);
+    gulp.watch(['./src/*.js']).on('change', reload);
 });
 
 gulp.task('production', ['sass:minify']);
